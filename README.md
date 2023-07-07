@@ -7,7 +7,7 @@ but authenticating using `eksctl` instead of passing through `KUBE_CONFIG_DATA`.
 
 ## Example
 
-Secrets required: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`
+Secrets required: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` (aws-configure-credentials)
 
 Inputs:
 
