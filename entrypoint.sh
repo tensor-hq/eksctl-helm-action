@@ -19,6 +19,6 @@ fi
 
 echo "running entrypoint command(s)"
 
-response=$(sh -c "$INPUT_COMMAND")
+response=$(sh -xc "$INPUT_COMMAND")
 
 echo "::set-output name=response::$response"
