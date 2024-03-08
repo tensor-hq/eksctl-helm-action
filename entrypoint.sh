@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -xe
 
 export KUBECONFIG="${PWD}/kubeconfig"
 eksctl utils write-kubeconfig --cluster $INPUT_EKS_CLUSTER --kubeconfig $KUBECONFIG
