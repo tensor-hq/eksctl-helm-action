@@ -1,6 +1,10 @@
 #!/bin/sh
 
-set -xe
+set -e
+
+if [[ "${INPUT_VERBOSE}" == "true" ]]; then
+    set -x
+fi
 
 export KUBECONFIG="${PWD}/kubeconfig"
 eksctl utils write-kubeconfig --cluster $INPUT_EKS_CLUSTER --kubeconfig $KUBECONFIG
@@ -19,6 +23,6 @@ fi
 
 echo "running entrypoint command(s)"
 
-response=$(sh -xc "$INPUT_COMMAND")
+response=$(sh -c "$INPUT_COMMAND")
 
 echo "::set-output name=response::$response"

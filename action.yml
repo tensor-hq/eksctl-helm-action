@@ -13,6 +13,10 @@ inputs:
   eks_cluster:
     description: "Name of your EKS cluster (i.e., from `eksctl get cluster`)"
     required: true
+  verbose:
+    description: "Enables shell command tracing. Takes string input 'true' or 'false'. Defaults to false."
+    required: true
+    default: "false"
 outputs:
   result:
     description: "Output returned by your Helm or kubectl command"
