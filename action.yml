@@ -15,11 +15,11 @@ inputs:
     required: true
   image:
     description: "Optionally use a pre-built image to save build time"
-    required: true
+    required: false
     default: "Dockerfile"
   verbose:
     description: "Enables shell command tracing. Takes string input 'true' or 'false'. Defaults to false."
-    required: true
+    required: false
     default: "false"
 outputs:
   result:
