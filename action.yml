@@ -13,11 +13,19 @@ inputs:
   eks_cluster:
     description: "Name of your EKS cluster (i.e., from `eksctl get cluster`)"
     required: true
+  image:
+    description: "Optionally use a pre-built image to save build time"
+    required: false
+    default: "Dockerfile"
+  verbose:
+    description: "Enables shell command tracing. Takes string input 'true' or 'false'. Defaults to false."
+    required: false
+    default: "false"
 outputs:
   result:
     description: "Output returned by your Helm or kubectl command"
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: ${{ input.image }}
   args:
     - ${{ inputs.command }}

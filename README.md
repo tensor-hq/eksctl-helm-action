@@ -37,7 +37,7 @@ jobs:
           aws-region: us-east-1
 
       - name: helm deploy
-        uses: tensor-hq/eksctl-helm-action@master
+        uses: tensor-hq/eksctl-helm-action@main
         with:
           eks_cluster: my-prod-cluster
           plugins: "https://github.com/jkroepke/helm-secrets" # optional
