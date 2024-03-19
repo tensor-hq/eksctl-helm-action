@@ -26,6 +26,6 @@ outputs:
     description: "Output returned by your Helm or kubectl command"
 runs:
   using: "docker"
-  image: ${{ input.image }}
+  image: ${{ inputs.image }}
   args:
     - ${{ inputs.command }}
